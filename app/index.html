@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CharityChain</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+    <h1>CharityChain</h1>
+    <h2>The first fundraising platform on which fundraisers must give first<h2>
+    <h3>To start a campaign, drop 50% and collect the rest by inviting your entourage to unblock your donation. If successful, 100% of the funds are donated to the NGO. If the objective of the campaign is not achieved, everyone is refunded.</h3>
+    <h3>You have <span class="black"><span id="balance"></span> ETH</span></h3>
+    <p>retrieve from <span id="acount"></span></p>
+    <hr>
+    <h1>1 - Start your unstoppable Campaign</h1>
+    <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 200 (put here 50% of your campaign goal, in ether)"></input>
+    <br><label for="amount">Duration:</label><input type="number" id="duration" placeholder="e.g., 30 (In number of minutes) 10 days = 14400 min"></input>
+    <br><label for="receiver">NGO:</label><input value="0x02D2F21D014F9F7495A5F61a6275a1B07C02ef9e" type="text" id="receiver" placeholder="e.g., 0x02D2F21D014F9F7495A5F61a6275a1B07C02ef9e"></input>
+    <br><br><button id="send" onclick="App.createNewCharityChainContract()">Start Campaign</button>
+    <br><br>
+    <span id="status_step_1"></span>
+    <hr>
+    <h1>2 - Get information from your contract</h1>
+    <br><label>Contract:</label><input value="0x382e0ea9a2737023f1e978d92d24e6a0913536f6" type="text" id="contract_address" placeholder="e.g., 0x02D2F21D014F9F7495A5F61a6275a1B07C02ef9e"></input>
+    <br><label>Deadline:</label><span id="campaign_duration"></span>
+    <br><label>NGO:</label><span id="campaign_ngo"></span>
+    <br><label>Goal:</label><span id="campaign_goal"></span>
+    <br><label>Balance:</label><span id="campaign_balance"></span>
+
+    <br><div class="progress" id="progress"></div>
+
+    <div style="display: none; text-align: center" id="success">
+        <div id="heart">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 100 100">
+                <path fill-opacity="0" stroke-width="1" stroke="#bbb" d="M81.495,13.923c-11.368-5.261-26.234-0.311-31.489,11.032C44.74,13.612,29.879,8.657,18.511,13.923  C6.402,19.539,0.613,33.883,10.175,50.804c6.792,12.04,18.826,21.111,39.831,37.379c20.993-16.268,33.033-25.344,39.819-37.379  C99.387,33.883,93.598,19.539,81.495,13.923z"/>
+                <path id="heart-path" fill-opacity="0" stroke-width="3" stroke="#ED6A5A" d="M81.495,13.923c-11.368-5.261-26.234-0.311-31.489,11.032C44.74,13.612,29.879,8.657,18.511,13.923  C6.402,19.539,0.613,33.883,10.175,50.804c6.792,12.04,18.826,21.111,39.831,37.379c20.993-16.268,33.033-25.344,39.819-37.379  C99.387,33.883,93.598,19.539,81.495,13.923z"/>
+            </svg>
+        </div>
+        <span id="successInformation">All the money was transferred to the wallet of the NGO</span>
+    </div>
+    <div id="fail" style="display: none;">
+        <br>
+        The deadline has expired, all participants have been refunded !
+    </div>
+    <br><br>
+    <span id="status_step_2"></span>
+    <hr>
+    <h1>3 - Contribute</h1>
+    <br><label>Contract:</label><input value="0x382e0ea9a2737023f1e978d92d24e6a0913536f6" type="text" id="contract_to_contribute_address" placeholder="e.g., 0x02D2F21D014F9F7495A5F61a6275a1B07C02ef9e"></input>
+    <br><label>Amount:</label><input type="text" id="contribute_amount" placeholder="e.g., 200"></input>
+    <br><br><button id="readContractBt" onclick="App.contribute()">Contribute (Donate)</button>
+    <br><br>
+    <span id="status_step_3"></span>
+    <br>
+</body>
+</html>
