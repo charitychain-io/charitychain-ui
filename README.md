@@ -10,7 +10,7 @@ If the objective of the campaign is not achieved, everyone is reimbursed.
 You can run the app locally using truffle. 
 
     git clone https://github.com/charitychain-io/charitychain-ui
-    cd auctionhouse
+    cd charitychain-ui
     npm install -g truffle     // if not already installed
     npm install truffle-default-builder --save
     truffle serve
