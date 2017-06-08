@@ -5,8 +5,6 @@ You must drop half and collect the rest by inviting your entourage to unblock yo
 If successful, 100% of the funds are donated to the NGO.
 If the objective of the campaign is not achieved, everyone is reimbursed.
 
-Demo of dapp:
-https://vimeo.com/213355401
 
 Project overview
 https://medium.com/charitychain/introducing-charitychain-io-3c670204020d
