@@ -1,3 +1,5 @@
+⛔️ [DEPRECATED]
+
 # CharityChain project
 
 Choose an NGO and set a campaign target of 200 € for example.
